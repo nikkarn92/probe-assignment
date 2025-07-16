@@ -29,4 +29,11 @@ public class ProbeTest {
         assertEquals(1, probe.getPosY());
         assertEquals(Direction.NORTH, probe.getFacingDirection());
     }
+
+    @Test
+    void shouldTurnLeftFromNorthToWest() {
+        Probe probe = new Probe(0, 0, Direction.NORTH);
+        probe.turnLeft();
+        assertEquals(Direction.WEST, probe.getFacingDirection());
+    }
 }
