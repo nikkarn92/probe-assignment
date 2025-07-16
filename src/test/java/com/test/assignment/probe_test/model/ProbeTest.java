@@ -11,4 +11,13 @@ public class ProbeTest {
         assertEquals(2, probe.getPosY());
         assertEquals(Direction.NORTH, probe.getFacingDirection());
     }
+
+    @Test
+    void shouldMoveForwardWhenFacingNorth() {
+        Probe probe = new Probe(1, 1, Direction.NORTH);
+        probe.moveForward();
+        assertEquals(1, probe.getPosX());
+        assertEquals(2, probe.getPosY());
+        assertEquals(Direction.NORTH, probe.getFacingDirection());
+    }
 }
