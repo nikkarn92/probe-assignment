@@ -7,8 +7,8 @@ public class ProbeTest {
     @Test
     void shouldInitializeProbeAtGivenPositionAndDirection() {
         Probe probe = new Probe(1, 2, Direction.NORTH);
-        assertEquals(1, probe.getX());
-        assertEquals(2, probe.getY());
-        assertEquals(Direction.NORTH, probe.getDirection());
+        assertEquals(1, probe.getPosX());
+        assertEquals(2, probe.getPosY());
+        assertEquals(Direction.NORTH, probe.getFacingDirection());
     }
 }
