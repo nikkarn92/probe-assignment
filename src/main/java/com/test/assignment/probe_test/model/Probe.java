@@ -51,4 +51,13 @@ public class Probe {
             case WEST  -> posX--;
         }
     }
+
+    public void moveBackward() {
+        switch (facingDirection) {
+            case NORTH -> posY--;
+            case SOUTH -> posY++;
+            case EAST  -> posX--;
+            case WEST  -> posX++;
+        }
+    }
 }
