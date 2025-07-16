@@ -60,4 +60,13 @@ public class Probe {
             case WEST  -> posX++;
         }
     }
+
+    public void turnLeft() {
+        switch (facingDirection) {
+            case NORTH -> facingDirection = Direction.WEST;
+            case WEST  -> facingDirection = Direction.SOUTH;
+            case SOUTH -> facingDirection = Direction.EAST;
+            case EAST  -> facingDirection = Direction.NORTH;
+        }
+    }
 }
