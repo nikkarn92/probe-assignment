@@ -20,14 +20,12 @@ import java.util.List;
 public class ProbeController {
 
     @PostMapping("/move")
-    @Operation(summary = "Execute commands for the ocean probe")
     public CommandResponse moveProbe(@RequestBody CommandRequest request) {
+        List<Point> obstaclePoints = request.grid.obstacles.stream()
+                .map(list -> new Point(list.get(0), list.get(1)))
+                .toList();
 
-        Grid grid = new Grid(
-                request.grid.width,
-                request.grid.height,
-                request.grid.obstacles
-        );
+        Grid grid = new Grid(request.grid.width, request.grid.height, obstaclePoints);
 
         Probe probe = new Probe(
                 request.probe.x,

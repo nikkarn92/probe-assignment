@@ -17,7 +17,7 @@ public class CommandRequest {
         @Min(1)
         public int height;
 
-        public List<Point> obstacles;
+        public List<List<Integer>> obstacles;
     }
 
     public static class ProbeRequest {
