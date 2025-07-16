@@ -36,4 +36,11 @@ public class ProbeTest {
         probe.turnLeft();
         assertEquals(Direction.WEST, probe.getFacingDirection());
     }
+
+    @Test
+    void shouldTurnRightFromNorthToEast() {
+        Probe probe = new Probe(0, 0, Direction.NORTH);
+        probe.turnRight();
+        assertEquals(Direction.EAST, probe.getFacingDirection());
+    }
 }
