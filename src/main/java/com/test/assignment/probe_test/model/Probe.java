@@ -42,4 +42,13 @@ public class Probe {
     public void setFacingDirection(Direction facingDirection) {
         this.facingDirection = facingDirection;
     }
+
+    public void moveForward() {
+        switch (facingDirection) {
+            case NORTH -> posY++;
+            case SOUTH -> posY--;
+            case EAST  -> posX++;
+            case WEST  -> posX--;
+        }
+    }
 }
