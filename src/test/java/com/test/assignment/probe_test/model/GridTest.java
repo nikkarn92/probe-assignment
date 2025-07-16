@@ -19,4 +19,11 @@ public class GridTest {
         assertFalse(grid.isWithinBounds(6, 0));
         assertFalse(grid.isWithinBounds(0, -1));
     }
+
+    @Test
+    void shouldDetectObstacle() {
+        Grid grid = new Grid(5, 5, List.of(new Point(2, 2), new Point(3, 3)));
+        assertTrue(grid.hasObstacle(2, 2));
+        assertFalse(grid.hasObstacle(1, 1));
+    }
 }
